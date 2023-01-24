@@ -1,0 +1,237 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Server\\SimpleTouchTask.Server.csproj": {}
+  },
+  "projects": {
+    "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\SimpleTouchTask.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\SimpleTouchTask.Client.csproj",
+        "projectName": "SimpleTouchTask.Client",
+        "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\SimpleTouchTask.Client.csproj",
+        "packagesPath": "C:\\Users\\AHMED\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AHMED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj": {
+                "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.0, 7.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Server\\SimpleTouchTask.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Server\\SimpleTouchTask.Server.csproj",
+        "projectName": "SimpleTouchTask.Server",
+        "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Server\\SimpleTouchTask.Server.csproj",
+        "packagesPath": "C:\\Users\\AHMED\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AHMED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\SimpleTouchTask.Client.csproj": {
+                "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Client\\SimpleTouchTask.Client.csproj"
+              },
+              "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj": {
+                "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj",
+        "projectName": "SimpleTouchTask.Shared",
+        "projectPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\SimpleTouchTask.Shared.csproj",
+        "packagesPath": "C:\\Users\\AHMED\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkShop\\Tasks\\SimpleTouch\\SimpleTouchTask\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AHMED\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+﻿@page "/"
+@inject HttpClient Http
+@using SimpleTouchTask.Shared.Dtos;
+@using System.Net;
+@using System.Text.Json;
+
+<PageTitle>Index</PageTitle>
+
+<div style="text-align: center;">
+    <h1>Penalty Calculation</h1>
+</div>
+<div class="row" style="margin:20px">
+   <div class="col-6">
+       <div class="row">
+            <h6 class="col-2">Start Date:</h6>
+            <div class="col-4">
+                <InputDate @bind-Value="@requestDto.StartDate" class="form-control" />
+            </div>
+       </div>
+   </div>
+    <div class="col-6">
+        <div class="row">
+            <h6 class="col-2">End Date: </h6>
+            <div class="col-4">
+                <InputDate @bind-Value="@requestDto.EndDate" class="form-control" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin:20px">
+    <div class="col-6">
+        <div class="row">
+            <h6 class="col-2">Country: </h6>
+            <div class="col-4">
+                <select @onchange="@OnSelectLibraryCountry" class="form-select" aria-label="Default select example">
+                    <option selected>Select Country</option>
+                    @foreach (var item in listLibraryCountries)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="row">
+            <h6 class="col-2"> Penalty: </h6>
+            <div class="col-4">
+                <span>@PenaltyValue</span> <span> @LibraryCountrySelected?.CurrencyKey</span>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    private CalculatePenaltyRequestDto requestDto = new CalculatePenaltyRequestDto();
+    private List<LibraryCountryResponseDto>  listLibraryCountries= new List<LibraryCountryResponseDto>();
+    private LibraryCountryResponseDto? LibraryCountrySelected { get; set; }
+    private string PenaltyValue { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        requestDto.StartDate = DateTime.Now;
+        requestDto.EndDate = DateTime.Now;
+
+
+        var response = await Http.GetFromJsonAsync<List<LibraryCountryResponseDto>>("api/LibraryCountry/GetAllLibraryCountries");
+        if (response != null)
+        {
+            listLibraryCountries = response;
+        }
+    }
+
+    async Task OnSelectLibraryCountry(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int selectedId))
+        {
+            LibraryCountrySelected = listLibraryCountries.FirstOrDefault(o => o.Id == selectedId);
+
+            var response = await Http.PostAsJsonAsync("api/CalculationPenalty/CalculationPenalty",
+                                              new CalculatePenaltyRequestDto()
+                                                  {
+                                                      CountryId=selectedId,
+                                                      EndDate=requestDto.EndDate,
+                                                      StartDate=requestDto.StartDate
+                                                  });
+
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var responseBody = await response.Content.ReadAsStringAsync();
+                var options = new JsonSerializerOptions
+                    {
+                        IncludeFields = true,
+                    };
+                CalculatePenaltyResponseDto? resBodyJson = JsonSerializer.Deserialize<CalculatePenaltyResponseDto>(responseBody, options);
+                PenaltyValue = resBodyJson?.penaltyValue.ToString()??"";
+            }
+
+        }
+
+    }
+}
+

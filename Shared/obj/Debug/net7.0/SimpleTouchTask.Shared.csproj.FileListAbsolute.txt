@@ -1,0 +1,12 @@
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\bin\Debug\net7.0\SimpleTouchTask.Shared.deps.json
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\bin\Debug\net7.0\SimpleTouchTask.Shared.dll
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\bin\Debug\net7.0\SimpleTouchTask.Shared.pdb
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.csproj.AssemblyReference.cache
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.AssemblyInfoInputs.cache
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.AssemblyInfo.cs
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.csproj.CoreCompileInputs.cache
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.dll
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\refint\SimpleTouchTask.Shared.dll
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\SimpleTouchTask.Shared.pdb
+D:\WorkShop\Tasks\SimpleTouch\SimpleTouchTask\Shared\obj\Debug\net7.0\ref\SimpleTouchTask.Shared.dll
